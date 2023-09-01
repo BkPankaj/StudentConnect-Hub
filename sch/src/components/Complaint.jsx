@@ -144,8 +144,9 @@ export default function Complaint({currentStudent,ScreenChange}){
 };
 
 const FormContainer = styled.div`
-padding: 5% 25%;
+padding: 5%;
 gap: 1rem;
+
 h3{
     text-align: center;
 }
