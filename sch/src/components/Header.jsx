@@ -1,7 +1,6 @@
 import React from 'react'
-import { BiSolidLogOut, BiSolidLogOutCircle } from 'react-icons/bi'
 import 
- {BsFillBellFill, BsFillEnvelopeFill, BsPersonCircle, BsSearch, BsJustify}
+ {BsJustify}
  from 'react-icons/bs'
  import Logout from './logout';
 function Header({OpenSidebar,currentStudent}) {
@@ -15,14 +14,9 @@ function Header({OpenSidebar,currentStudent}) {
         <div className='header-left'>
           
             {currentStudent.name}
-          
-            <BsFillBellFill className='icon icon_noti'/>
-            
-          
         </div>
         <div className='header-right'>
             <Logout/>
-            {/* <BiSolidLogOut className='icon icon_header'  onClick={<Logout/>}/> */}
         </div>
     </header>
     )}

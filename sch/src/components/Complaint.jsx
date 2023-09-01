@@ -5,6 +5,7 @@ import { ToastContainer,toast} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { Link, useNavigate } from 'react-router-dom';
+
 export default function Complaint({currentStudent,ScreenChange}){
     const navigate = useNavigate();
     const [firstOption,setfirstOption] = useState("f0")
@@ -42,7 +43,7 @@ export default function Complaint({currentStudent,ScreenChange}){
         if(handleValidation()){
             setTime(new Date());
             curr_t = Time.toLocaleTimeString();
-            curr_d = Time.toLocaleDateString();
+            curr_d = Time;
             values.time = curr_t;
             values.date = curr_d;
             console.log(values);
@@ -88,6 +89,9 @@ export default function Complaint({currentStudent,ScreenChange}){
 
     return(
         <>
+        <div className='main-title'>
+            <h3>COMPLAINT NOW</h3>
+        </div>
         <FormContainer>
         <form onSubmit={(event) => sendComplaint(event)}>
             <select name="firstOption" id="" onChange={(e) => setfirstOption(e.target.value)}>

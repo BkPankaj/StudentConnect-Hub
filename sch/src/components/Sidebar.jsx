@@ -27,22 +27,12 @@ function Sidebar({openSidebarToggle, OpenSidebar, ScreenChange}) {
             </li>
             <li className='sidebar-list-item' onClick={()=>changeCurrentScreen("ComplainNow")}>
                 
-                    <BsFillArchiveFill className='icon'/> Complain Now
+                    <BsFillArchiveFill className='icon'/> Complaint Now
                 
-            </li>
-            <li className='sidebar-list-item' onClick={()=>changeCurrentScreen("Urgenthelp")} > 
-                <a href="">
-                    <BsPeopleFill className='icon'/> Urgent help
-                </a>
             </li>
             <li className='sidebar-list-item' onClick={()=>changeCurrentScreen("Track")}>
                 <a href="">
                     <BsListCheck className='icon'/> Track
-                </a>
-            </li>
-            <li className='sidebar-list-item' onClick={()=>changeCurrentScreen("Polls")}>
-                <a href="">
-                    <BsFillGrid3X3GapFill className='icon'/> Polls
                 </a>
             </li>
 

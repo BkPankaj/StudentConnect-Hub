@@ -1,0 +1,28 @@
+/* styles.css */
+.table-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .data-table {
+    border-collapse: collapse;
+    width: 80%;
+    margin-top: 20px;
+  }
+  
+  .data-table th, .data-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .data-table th {
+    background-color: #000000;
+  }
+  
+  .data-table tr:nth-child(even) {
+    background-color: #6475a2;
+  }
+
+  

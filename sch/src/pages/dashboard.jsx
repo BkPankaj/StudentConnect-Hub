@@ -1,13 +1,11 @@
 import React, {useState,useEffect} from "react";
-import '../components/dashboard.css'
+import '../css/dashboard.css'
 import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
 import Home from '../components/Home'
 import styled from "styled-components";
 import Complaint from '../components/Complaint';
-import UrgentHelp from '../components/UrgentHelp';
 import Track from '../components/Track';
-import Polls from '../components/Polls';
 import { useNavigate } from "react-router-dom";
 
 
@@ -54,9 +52,7 @@ export default function Dashboard(){
         <div className="main-container">
         {
          currentScreen==="ComplainNow" ? (<Complaint currentStudent = {currentStudent} ScreenChange={handleScreenChange}/>) : 
-         currentScreen==="Urgenthelp" ? (<UrgentHelp/>) : 
          currentScreen==="Track" ? (<Track/>) :
-         currentScreen==="Polls" ? (<Polls/>) :
          (<Home/>) 
         }
         </div>
