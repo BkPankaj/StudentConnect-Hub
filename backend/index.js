@@ -23,5 +23,5 @@ app.use("/api/auth",userRoutes);
 app.use("/api/comp",complaintRoute);
 
 const server = app.listen(5000, ()=>
-    console.log(`Server started on Port ${5000}`)
+    console.log(`Server started on Port ${process.env.PORT}`)
 );

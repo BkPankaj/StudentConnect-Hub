@@ -2,10 +2,10 @@ const User = require("../model/userModel");
 const bcrypt = require("bcrypt");
 
 module.exports.register = async(req,res,next) => {
-    // console.log("1");
+  
     try {
         const { name,rollno,idcard,email,password,verify} = req.body;
-        // console.log("2");
+       
         const rollnoCheck = await User.findOne({rollno});
         if(rollnoCheck){
             return res.json({ msg: "Roll no already used", status: false});
@@ -35,7 +35,7 @@ module.exports.register = async(req,res,next) => {
 };
 
 module.exports.login = async(req,res,next) => {
-    // console.log(req.body);
+    
     try {
     const { rollno,password} = req.body;
     const user = await User.findOne({rollno});
