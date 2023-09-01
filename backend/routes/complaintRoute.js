@@ -5,6 +5,6 @@ const router = require("express").Router();
 
 // console.log("00");
 router.post("/sendcomp",complaint);
-router.get("/getcomp",getcomp);
-router.get("/getallcomp",getallcomp);
+router.post("/getcomp",getcomp);
+router.post("/getallcomp",getallcomp);
 module.exports = router;

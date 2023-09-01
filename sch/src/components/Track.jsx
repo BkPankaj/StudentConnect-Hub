@@ -3,19 +3,23 @@ import { trackRoute } from "../utils/APIRoutes";
 import {useState,useEffect} from 'react';
 import axios from "axios";
 
-export default function Track(){
+export default function Track({currentStudent}){
 
 const [trackdetail,settrackdetail] = useState()
 // const arr = [[4,5],[7,8]];
 useEffect( () =>{
+    if(currentStudent){
     const readDetails = async (event) =>{
-    const {data}= await axios.get(trackRoute,{});
+    const {data}= await axios.post(trackRoute,{
+        f_rollno:currentStudent.rollno,
+    });
     settrackdetail(data.documents);  
     // console.log(arr);
     // console.log(trackdetail);
 }
 readDetails();
-},[]);
+    }
+},[currentStudent]);
 
     
     return(

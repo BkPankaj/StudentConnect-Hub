@@ -5,17 +5,22 @@ import axios from "axios";
  { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } 
  from 'recharts';
 
- export default function Home() {
+ export default function Home({currentStudent}) {
   const [details,setdetails] = useState(undefined);
-  const chart_data = [];
+
   useEffect( () =>{
+    if(currentStudent){
       const readDetails = async (event) =>{
-      const {data}= await axios.get(homeRoute,{});
+      const {data}= await axios.post(homeRoute,{
+        f_rollno:currentStudent.rollno,
+
+      });
       setdetails(data);
       
   }
   readDetails();
-  },[]);
+}
+  },[currentStudent]);
   
   
      

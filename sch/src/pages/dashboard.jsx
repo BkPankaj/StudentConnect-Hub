@@ -52,8 +52,8 @@ export default function Dashboard(){
         <div className="main-container">
         {
          currentScreen==="ComplainNow" ? (<Complaint currentStudent = {currentStudent} ScreenChange={handleScreenChange}/>) : 
-         currentScreen==="Track" ? (<Track/>) :
-         (<Home/>) 
+         currentScreen==="Track" ? (<Track currentStudent = {currentStudent}/>) :
+         (<Home currentStudent = {currentStudent}/>) 
         }
         </div>
         {/* <Home  /> */}

@@ -48,6 +48,7 @@ cron.schedule('0 0 * * *', async () => {
     });
 
 module.exports.getallcomp = async(req,res,next) => {
-    const documents = await Complaint.find();
+    const {f_rollno} = req.body;
+    const documents = await Complaint.find({rollno:f_rollno});
     return res.json({documents});
 }
